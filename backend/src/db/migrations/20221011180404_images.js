@@ -1,4 +1,4 @@
-const { TABLE_IMAGE } = require("../../../constants");
+const { TABLE_IMAGE, TABLE_PRODUCT } = require("../../../constants");
 
 /**
  * @param { import("knex").Knex } knex
@@ -11,7 +11,7 @@ exports.up = function (knex) {
         table.increments("id").primary();
 
         table.integer("id_product").unsigned().notNull();
-        table.foreign("id_product").references("product.id");
+        table.foreign("id_product").references(`${TABLE_PRODUCT}.id`);
 
         table.timestamps(false, true);
     });

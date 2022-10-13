@@ -8,8 +8,8 @@ class UserActions {
             res.status(201).json(createResponse);
         } catch (err) {
             console.warn(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }
@@ -20,9 +20,9 @@ class UserActions {
             const data = await userService.getUser(id);
             res.status(200).json(data);
         } catch (err) {
-            console.log(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            console.warn(err);
+            res.status(500).json({
+                message: err.message,
             });
         }
     }
@@ -33,8 +33,8 @@ class UserActions {
             res.status(200).json(data);
         } catch (err) {
             console.log(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }
@@ -44,9 +44,9 @@ class UserActions {
             const data = await userService.getUsersWithAddresses();
             res.status(200).json(data);
         } catch (err) {
-            console.log(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            console.warn(err);
+            res.status(500).json({
+                message: err.message,
             });
         }
     }
@@ -57,6 +57,7 @@ class UserActions {
             await userService.removeUser(id);
             res.sendStatus(204);
         } catch (err) {
+            console.warn(err);
             if (err.client === "mysql") {
                 res.status(500).json({ message: err.message });
             } else {
@@ -71,8 +72,9 @@ class UserActions {
             await userService.removeUserAndAddress(id);
             res.sendStatus(204);
         } catch (err) {
-            res.status(err.response.status).json({
-                message: err.response.message,
+            console.warn(err);
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }
@@ -85,8 +87,8 @@ class UserActions {
             res.status(201).json(updateResponse);
         } catch (err) {
             console.warn(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }

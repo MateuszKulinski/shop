@@ -9,16 +9,16 @@ class AddressService {
         return await AddressModel.query().findById(id);
     }
 
-    async getUserAddresses(userId) {
-        return await AddressModel.query().where("id_user", userId);
+    async getUserAddresses(id) {
+        return await AddressModel.query().findById(id);
     }
 
     async removeAddress(id) {
         return await AddressModel.query().findById(id).delete();
     }
 
-    async removeUserAddress(userId) {
-        return await AddressModel.query().where("id_user", userId).delete();
+    async removeUserAddress(id) {
+        return await AddressModel.query().findById(id).delete();
     }
 
     async updateAddress(id, address) {

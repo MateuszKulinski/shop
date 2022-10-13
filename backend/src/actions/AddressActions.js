@@ -8,8 +8,8 @@ class AddressActions {
             res.status(201).json(createResponse);
         } catch (err) {
             console.warn(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }
@@ -21,8 +21,8 @@ class AddressActions {
             res.status(200).json(data);
         } catch (err) {
             console.log(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }
@@ -36,8 +36,8 @@ class AddressActions {
             res.status(201).json(createResponse);
         } catch (err) {
             console.warn(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }
@@ -49,8 +49,8 @@ class AddressActions {
             res.sendStatus(204);
         } catch (err) {
             console.warn(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }
@@ -62,8 +62,8 @@ class AddressActions {
             res.sendStatus(204);
         } catch (err) {
             console.warn(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }
@@ -79,8 +79,8 @@ class AddressActions {
             res.status(201).json(updateResponse);
         } catch (err) {
             console.warn(err);
-            res.status(err.response.status).json({
-                message: err.response.message,
+            res.status(err.status).json({
+                message: err.message,
             });
         }
     }

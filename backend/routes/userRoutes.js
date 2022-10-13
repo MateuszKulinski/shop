@@ -3,15 +3,23 @@ const userActions = require("../src/actions/UserActions");
 
 const router = express.Router();
 
-router.delete("/api/user/:id", userActions.removeUser);
-router.delete("/api/userAndAddress/:id", userActions.removeUserAndAddress);
+const ENDPOINT_NAME = "/user";
 
-router.get("/api/user/:id", userActions.getUser);
-router.get("/api/user/all", userActions.getUsers); //tests
-router.get("/api/user/allWithAddresses", userActions.getUsersWithAddresses); //tests
+router.get(`${ENDPOINT_NAME}/all`, userActions.getUsers); //tests
+router.get(
+    `${ENDPOINT_NAME}/allWithAddresses`,
+    userActions.getUsersWithAddresses
+); //tests
 
-router.post("/api/user", userActions.createUser);
+router.post(`${ENDPOINT_NAME}/create`, userActions.createUser);
 
-router.put("/api/user/:id", userActions.updateUser);
+router.delete(`${ENDPOINT_NAME}/:id`, userActions.removeUser);
+router.delete(
+    `${ENDPOINT_NAME}AndAddress/:id`,
+    userActions.removeUserAndAddress
+);
+
+router.get(`${ENDPOINT_NAME}/:id`, userActions.getUser);
+router.put(`${ENDPOINT_NAME}/:id`, userActions.updateUser);
 
 module.exports = router;

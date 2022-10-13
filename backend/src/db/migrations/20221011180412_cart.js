@@ -1,4 +1,4 @@
-const { TABLE_CART } = require("../../../constants");
+const { TABLE_CART, TABLE_USER, TABLE_ADDRESS } = require("../../../constants");
 
 /**
  * @param { import("knex").Knex } knex
@@ -10,10 +10,10 @@ exports.up = function (knex) {
         table.increments("id").primary();
 
         table.integer("id_user").unsigned().notNullable();
-        table.foreign("id_user").references("users.id");
+        table.foreign("id_user").references(`${TABLE_USER}.id`);
 
         table.integer("id_address").unsigned().notNullable();
-        table.foreign("id_address").references("address.id");
+        table.foreign("id_address").references(`${TABLE_ADDRESS}.id`);
 
         table.timestamps(false, true);
     });

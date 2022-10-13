@@ -1,13 +1,13 @@
 const db = require("../db/db");
 const { Model } = require("objection");
 
-const TABLE_NAME = "address";
+const { TABLE_ADDRESS } = require("../../constants");
 
 Model.knex(db);
 
 class AddressModel extends Model {
     static get tableName() {
-        return TABLE_NAME;
+        return TABLE_ADDRESS;
     }
 }
 

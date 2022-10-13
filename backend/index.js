@@ -1,15 +1,22 @@
 const express = require("express");
-const userRoutes = require("./routes/userRoutes");
-const addressRoutes = require("./routes/addressRoutes");
+const userRoutes = require("./routes/UserRoutes");
+const addressRoutes = require("./routes/AddressRoutes");
+const employeeRoutes = require("./routes/EmployeeRouters");
+const productRoutes = require("./routes/ProductRoutes");
+
 const { PORT } = require("./config");
 
-const router = express.Router();
 const app = express();
-app.use(express.json());
-app.use(userRoutes);
-app.use(addressRoutes);
 
-router.get("/", (req, res) => {
+const API_NAME = "/api";
+
+app.use(express.json());
+app.use(API_NAME, userRoutes);
+app.use(API_NAME, addressRoutes);
+app.use(API_NAME, employeeRoutes);
+app.use(API_NAME, productRoutes);
+
+app.get("/", (req, res) => {
     res.send("Server working");
 });
 
