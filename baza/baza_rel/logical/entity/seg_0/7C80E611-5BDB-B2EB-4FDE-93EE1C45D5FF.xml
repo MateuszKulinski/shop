@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7C80E611-5BDB-B2EB-4FDE-93EE1C45D5FF" name="emplyee">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:17:41 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_emplyee" id="3F131284-5C33-F84D-1F31-971E51789B3D">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:17:54 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="firstname" id="482E2EBB-37C4-34A0-B440-44E10A3EA02E">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:17:54 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lastname" id="F451FD7C-5A19-12C2-79BE-17414E65EB2C">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:17:55 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="entitlements" id="75B9AB22-8543-41D2-1D47-F026A38CE368">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:18:48 UTC</createdTime>
+<comment><![CDATA[1 - adminstrator
+2 - moderator
+3 - employee]]></comment>
+<ownerDesignName>baza_rel</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT042</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_date" id="39A40D4B-0605-6BEB-25B5-935E89C90928">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:26:20 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AD59C2D9-9E81-8F45-1234-98328F7775E3" name="emplyee PK">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:18:43 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3F131284-5C33-F84D-1F31-971E51789B3D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

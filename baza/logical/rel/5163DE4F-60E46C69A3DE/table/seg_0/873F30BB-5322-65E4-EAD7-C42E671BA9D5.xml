@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="873F30BB-5322-65E4-EAD7-C42E671BA9D5" name="images">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:00:00 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_image" id="7ACD43AB-613F-BB33-5696-AD9B7C6040C2">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:01:01 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_product" id="F2E74472-FF6F-F443-CE0E-98AC004F8E54">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:01:01 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7025E6F2-C8B2-F793-5008-7BC943A2E2AC" name="images_PK">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:01:07 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7ACD43AB-613F-BB33-5696-AD9B7C6040C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="5B88AF39-2DD6-8F4D-54AC-539E2BD6A61E" mainViewID="21BB1925-3709-E47B-AB65-0A68798EC12B">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:10:00 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

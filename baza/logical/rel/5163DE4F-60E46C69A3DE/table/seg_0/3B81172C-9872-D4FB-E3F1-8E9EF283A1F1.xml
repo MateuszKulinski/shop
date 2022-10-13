@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3B81172C-9872-D4FB-E3F1-8E9EF283A1F1" name="category">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:57:12 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_category" id="A07EAD19-9B14-2BAB-1894-B19976251E7C">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:58:31 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="6767C6BB-B370-1C47-F152-0FAECB2C1B5E">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:58:31 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="76A86D24-5F3E-D524-CD19-444D330EC704">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:58:31 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="img" id="913B66F3-7065-2A63-A8E9-ABBCF0D7A71B">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:59:55 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="63586B39-82A5-277A-2D28-FFEDD403CE51" name="category_PK">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:01:15 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A07EAD19-9B14-2BAB-1894-B19976251E7C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

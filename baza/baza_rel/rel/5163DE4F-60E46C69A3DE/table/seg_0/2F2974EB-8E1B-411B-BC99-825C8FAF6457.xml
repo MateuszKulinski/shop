@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2F2974EB-8E1B-411B-BC99-825C8FAF6457" name="address">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:44:02 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_address" id="CA3CAD3E-0B1D-636D-DC8E-AEA1A2B16DDB">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:48:55 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_customer" id="B2B5AB2F-272F-6F3D-E2DD-9C03760C7167">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:48:55 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="city" id="D6400210-EF04-75CE-FFF8-B26F66AAA2FE">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:48:55 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="postalcode" id="1FA9F519-586B-E623-F5FA-7E7219BFE576">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:48:55 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street" id="01677BB5-AE1D-6320-FBCB-3E4600C99DA6">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:48:55 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="number" id="C4BD527C-3E37-964B-131C-1991FB47CC21">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:48:55 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E28E6ECA-157F-B700-F0B6-323234C46E47" name="address_PK">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:48:55 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA3CAD3E-0B1D-636D-DC8E-AEA1A2B16DDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D79F37E2-95E3-0EB8-D67E-695827716E6E" name="address__UN">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:49:46 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA3CAD3E-0B1D-636D-DC8E-AEA1A2B16DDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AA10341C-E5CF-79D5-6327-77E29B9A0C86" name="cart">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:02:45 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cart" id="B6B2BFC5-5487-D1D4-F74A-9B9B5720A89D">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:04:17 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_user" id="5C8BF6ED-66B7-FE29-6E83-8F5FE82EE86A">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:04:17 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_address" id="31BE2F88-3642-ACCC-8FE5-2F3172ACF156">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:04:17 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

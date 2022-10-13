@@ -1,0 +1,25 @@
+const { TABLE_CATEGORY_PRODUCT } = require("../../../constants");
+
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+
+exports.up = function (knex) {
+    knex.schema.dropTableIfExists(TABLE_CATEGORY_PRODUCT);
+    return knex.schema.createTable(TABLE_CATEGORY_PRODUCT, (table) => {
+        table.integer("id_product").unsigned().notNullable();
+        table.foreign("id_product").references("product.id");
+
+        table.integer("id_category").unsigned().notNullable();
+        table.foreign("id_category").references("category.id");
+    });
+};
+
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+exports.down = function (knex) {
+    return knex.schema.dropTableIfExists(TABLE_CATEGORY_PRODUCT);
+};

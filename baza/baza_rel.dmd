@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="baza_rel" id="CE22AF9D-87ED-7B30-5CB9-BB35B685C8F5" version="3.5">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:10:00 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CE22AF9D-87ED-7B30-5CB9-BB35B685C8F5</designId>
+</OSDM_Design>

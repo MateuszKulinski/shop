@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BCB0ECFC-BF9D-21FE-FFFF-8F461B449045" name="employee">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:41:12 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_employee" id="A9E2F879-F5CA-DDCF-C74B-0683A94D8260">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:42:32 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="firstname" id="8EC06F70-084C-BFD1-D7CF-BDEBCD9E4ED9">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:42:32 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lastname" id="F414D32C-EB95-CAD8-4332-430F86BEA47F">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:42:32 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="54CFBF4E-C310-DE9E-183C-B34D34AD476F">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:42:32 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="1CB0D926-984C-49B6-D72D-9AE7826DDD50">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:42:32 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="entitlements" id="E9DA9D9E-234A-FBB4-006B-4D4E937487A5">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:43:43 UTC</createdTime>
+<comment><![CDATA[1 - administrator
+2 - moderator
+3 - employee]]></comment>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT042</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_add" id="2C54AAFD-0C19-2943-6A6E-6B8AFDF6CC59">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:44:00 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="11185F7D-C0D1-E514-2B8F-3928BC57E7BD" name="employee_PK">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:49:19 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9E2F879-F5CA-DDCF-C74B-0683A94D8260"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

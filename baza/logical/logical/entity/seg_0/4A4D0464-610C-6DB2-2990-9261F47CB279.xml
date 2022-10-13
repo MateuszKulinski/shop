@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A4D0464-610C-6DB2-2990-9261F47CB279" name="address">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:26:52 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_address" id="735FC0F6-EF68-D1D1-D42A-37DAD650F634">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:27:04 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_customer" id="D966F789-EA8D-0637-442D-EEAD4375C38A">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:29:36 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="city" id="DC399781-927F-2CCB-F220-0C245EADE3D4">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:27:05 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="postal_code" id="E4241F68-5724-9377-A838-5C6074902919">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:27:05 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="number" id="7CEA8721-D3A6-8365-FE94-425740689DB3">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:27:06 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="street" id="180062AB-568A-BE36-21DC-426C9CC3ADEC">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:27:59 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="850855CB-6CB4-A40D-374F-CC03E14EEB19" name="address PK">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:30:37 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="5163DE4F-2789-C886-2338-60E46C69A3DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>735FC0F6-EF68-D1D1-D42A-37DAD650F634</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

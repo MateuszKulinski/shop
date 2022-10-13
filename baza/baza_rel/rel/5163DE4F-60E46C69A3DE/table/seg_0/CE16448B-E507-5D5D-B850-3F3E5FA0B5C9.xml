@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CE16448B-E507-5D5D-B850-3F3E5FA0B5C9" name="product">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:53:50 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_product" id="107CDDEF-5148-701C-7AE8-994A4668A288">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:54:46 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="154CB34B-E11D-6808-121A-FE09B6EE7F72">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:54:46 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="index" id="E6A01D66-D2BE-9BF1-48AB-9C8488D48228">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:55:18 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="349BF9AE-EB08-7822-8030-7668DFD9A099">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:55:59 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="24B59F18-EE68-B7B2-3E08-D900CA319BC0">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 19:56:35 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="52A5DD02-868A-2B26-20E5-8420BD1BBD56" name="product_PK">
+<createdBy>MK Web Day</createdBy>
+<createdTime>2022-10-04 20:01:20 UTC</createdTime>
+<ownerDesignName>baza_rel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="107CDDEF-5148-701C-7AE8-994A4668A288"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
