@@ -1,3 +1,5 @@
+const CategoryModel = require("../models/CategoryModel");
+const { checkColumns } = require("../models/Tools");
 const categoryProductService = require("../services/CategoryProductService");
 const categoryService = require("../services/CategoryService");
 
@@ -23,6 +25,23 @@ class CategoryActions {
         } catch (err) {
             console.warn(err);
             res.status(err.status).json({
+                message: err.message,
+            });
+        }
+    }
+
+    async getMainCategories(req, res) {
+        try {
+            const orderBy = req.params.orderBy || "id";
+            if (await checkColumns(CategoryModel, orderBy)) {
+                const data = await categoryService.getMainCategories(orderBy);
+                res.status(200).json(data);
+            } else {
+                throw new Error("order by incorrected");
+            }
+        } catch (err) {
+            console.warn(err);
+            res.status(500).json({
                 message: err.message,
             });
         }

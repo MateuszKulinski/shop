@@ -9,6 +9,10 @@ class CategoryService {
         return await CategoryModel.query().findById(id);
     }
 
+    async getMainCategories(orderBy) {
+        return await CategoryModel.query().where("level", 1).orderBy(orderBy);
+    }
+
     async removeCategory(id) {
         return await CategoryModel.query().findById(id).delete();
     }

@@ -28,6 +28,19 @@ class ProductActions {
         }
     }
 
+    async getRandomProduct(req, res) {
+        try {
+            const count = req.params.count;
+            const data = await productService.getRandomProduct(count);
+            res.status(200).json(data);
+        } catch (err) {
+            console.warn(err);
+            res.status(err.status).json({
+                message: err.message,
+            });
+        }
+    }
+
     async removeProduct(req, res) {
         try {
             const id = req.params.id;

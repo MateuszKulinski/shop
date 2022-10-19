@@ -1,0 +1,32 @@
+
+
+:root {
+  --firstColor: #cc0022,
+  --firstColorDark: #8f0029,
+  --secondColor: #ffbfd1,
+  --firstColor: #1dcc00,
+  --thirdColor: #ffbfd1,
+}
+
+[data-theme="dark"] {
+  --first-color: #240060;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.row{
+  width: 100%;
+}
+.white-text{
+  color: #fff;
+}
+.no-underline{
+  text-decoration: none;
+}
+.first-color{
+  color: var(--firstColor) !important;
+}

@@ -1,4 +1,8 @@
 class Tools {
+    checkColumns = async (Model, columnName) => {
+        const fields = await Model.query().columnInfo();
+        return fields.hasOwnProperty(columnName);
+    };
     generatePassword = () => {
         let length = 8,
             charset =

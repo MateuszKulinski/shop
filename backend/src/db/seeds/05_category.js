@@ -22,7 +22,7 @@ exports.seed = async function (knex) {
                 let level = 1;
                 if (i > 5) {
                     id_parent = generateParent(categoryArray);
-                    level = categoryArray[id_parent].level + 1;
+                    level = categoryArray[id_parent - 1].level + 1;
                 }
 
                 const category = {

@@ -9,6 +9,11 @@ router.post(`${ENDPOINT_NAME}`, categoryActions.createCategory);
 
 router.get(`${ENDPOINT_NAME}/:id`, categoryActions.getCategory);
 
+router.get(
+    `${ENDPOINT_NAME}/getMainCategories/:orderBy?`,
+    categoryActions.getMainCategories
+);
+
 router.delete(`${ENDPOINT_NAME}/:id`, categoryActions.removeCategory);
 
 router.put(`${ENDPOINT_NAME}/:id`, categoryActions.updateCategory);
