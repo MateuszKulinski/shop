@@ -6,7 +6,10 @@ class ProductActions {
         try {
             const product = { ...req.body };
             const createResponse = await productService.createProduct(product);
-            res.status(201).json(createResponse);
+            res.status(201).json({
+                status: 201,
+                data: createResponse,
+            });
         } catch (err) {
             console.warn(err);
             res.status(err.status).json({
@@ -19,7 +22,10 @@ class ProductActions {
         try {
             const id = req.params.id;
             const data = await productService.getProduct(id);
-            res.status(201).json(data);
+            res.status(200).json({
+                status: 200,
+                data: data,
+            });
         } catch (err) {
             console.warn(err);
             res.status(err.status).json({
@@ -32,7 +38,10 @@ class ProductActions {
         try {
             const count = req.params.count;
             const data = await productService.getRandomProduct(count);
-            res.status(200).json(data);
+            res.status(200).json({
+                status: 200,
+                data: data,
+            });
         } catch (err) {
             console.warn(err);
             res.status(err.status).json({

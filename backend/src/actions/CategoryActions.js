@@ -47,6 +47,20 @@ class CategoryActions {
         }
     }
 
+    async getProducts(req, res) {
+        try {
+            const id = req.params.id;
+            const categories = await categoryService.getCategoryChildrens(id);
+            console.log(categories);
+            res.status(200).json(categories);
+        } catch (err) {
+            console.warn(err);
+            res.status(err.status).json({
+                message: err.message,
+            });
+        }
+    }
+
     async removeCategory(req, res) {
         try {
             const id = req.params.id;

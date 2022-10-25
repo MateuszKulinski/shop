@@ -27,13 +27,16 @@ class ProductService {
             choiceIds.push(productsIdsArray[id]);
             productsIdsArray.slice(productsIds[id], 1);
         }
+        if (choiceIds) {
+            const choceProducts = await ProductModel.query().whereIn(
+                "id",
+                choiceIds
+            );
 
-        const choceProducts = await ProductModel.query().whereIn(
-            "id",
-            choiceIds
-        );
-
-        return choceProducts;
+            return choceProducts;
+        } else {
+            throw new Error("products empty");
+        }
     }
 }
 

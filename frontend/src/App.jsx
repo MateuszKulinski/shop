@@ -1,14 +1,15 @@
 import React from "react";
-
 import "./App.scss";
 import Header from "./components/HeaderComponent/Header";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import StoreProvider from "./store/StoreProvider";
+import Content from "./components/ContentComponent/Content";
 
 const App = () => (
     <StoreProvider>
-        <Router>
+        <Router basename="/">
             <Header />
+            <Content />
         </Router>
     </StoreProvider>
 );

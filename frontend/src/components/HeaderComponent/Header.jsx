@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Dropdown, Row } from "react-bootstrap";
+import { Button, Col, Dropdown, Row, Container } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +11,6 @@ import axios from "axios";
 import { API_ROUTES_CATEGORY, API_URL } from "../../constants";
 import { BounceLoader } from "react-spinners";
 import { firstColor } from "../../colors";
-import { Container } from "react-bootstrap";
 
 const Header = () => {
     const [categories, setCategories] = useState(null);
@@ -24,13 +23,14 @@ const Header = () => {
 
     const dropdownContent = categories ? (
         categories.map((category) => (
-            <DropdownItem
+            <Link
                 key={category.id}
-                href={`/category/${category.id}`}
-                className="no-underline first-color"
+                to={`/category/${category.id}`}
+                title={category.name}
+                className="no-underline first-color dropdown-item"
             >
                 {category.name}
-            </DropdownItem>
+            </Link>
         ))
     ) : (
         <DropdownItem>
@@ -39,7 +39,7 @@ const Header = () => {
     );
 
     return (
-        <Navbar fixed="top" variant="dark">
+        <Navbar fixed="top" variant="dark" className="bg-dark">
             <Container>
                 <Row className="align-items-center">
                     <Col xs="1">

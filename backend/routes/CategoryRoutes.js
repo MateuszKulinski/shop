@@ -14,6 +14,8 @@ router.get(
     categoryActions.getMainCategories
 );
 
+router.get(`${ENDPOINT_NAME}/getProducts/:id`, categoryActions.getProducts);
+
 router.delete(`${ENDPOINT_NAME}/:id`, categoryActions.removeCategory);
 
 router.put(`${ENDPOINT_NAME}/:id`, categoryActions.updateCategory);

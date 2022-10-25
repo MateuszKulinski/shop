@@ -4,6 +4,7 @@ const addressRoutes = require("./routes/AddressRoutes");
 const employeeRoutes = require("./routes/EmployeeRouters");
 const productRoutes = require("./routes/ProductRoutes");
 const categoryRoutes = require("./routes/CategoryRoutes");
+const contactRoutes = require("./routes/ContactRoutes");
 const cors = require("cors");
 
 const { PORT } = require("./config");
@@ -19,6 +20,7 @@ app.use(API_NAME, addressRoutes);
 app.use(API_NAME, employeeRoutes);
 app.use(API_NAME, productRoutes);
 app.use(API_NAME, categoryRoutes);
+app.use(API_NAME, contactRoutes);
 
 app.get("/", (req, res) => {
     res.send("Server working");
