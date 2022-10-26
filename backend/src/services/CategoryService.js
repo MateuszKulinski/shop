@@ -25,17 +25,19 @@ class CategoryService {
         const categories = await CategoryModel.query()
             .column("id")
             .where("id_parent", id);
+
         if (categories.length) {
-            const categoriesArray = [];
-            categories.forEach(async (category) => {
-                const childId = await this.getCategoryChildrens(category.id);
-                console.log("C" + childId);
-                categoriesArray.push(childId);
-            });
-            console.log("ID" + id, "C2" + categoriesArray);
-            return categoriesArray;
+            const arrayId = [id];
+            await Promise.all(
+                categories.map(async (item) => {
+                    const childId = await this.getCategoryChildrens(
+                        parseInt(item.id)
+                    );
+                    arrayId.push(childId);
+                })
+            );
+            return arrayId.flat();
         } else {
-            console.log("ID2" + id);
             return id;
         }
     }

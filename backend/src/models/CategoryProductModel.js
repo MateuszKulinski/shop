@@ -1,7 +1,5 @@
 const db = require("../db/db");
 const { Model } = require("objection");
-const CategoryModel = require("./CategoryModel");
-const ProductModel = require("./ProductModel");
 const {
     TABLE_CATEGORY,
     TABLE_PRODUCT,
@@ -16,9 +14,11 @@ class CategoryProductModel extends Model {
     }
 
     static get relationMappings() {
+        const CategoryModel = require("./CategoryModel");
+        const ProductModel = require("./ProductModel");
         return {
             category: {
-                relation: CategoryModel.HasManyRelation,
+                relation: Model.HasManyRelation,
                 modelClass: CategoryModel,
                 join: {
                     from: `${TABLE_CATEGORY}.id`,
@@ -26,7 +26,7 @@ class CategoryProductModel extends Model {
                 },
             },
             product: {
-                relation: ProductModel.HasManyRelation,
+                relation: Model.BelongsToOneRelation,
                 modelClass: ProductModel,
                 join: {
                     from: `${TABLE_PRODUCT}.id`,

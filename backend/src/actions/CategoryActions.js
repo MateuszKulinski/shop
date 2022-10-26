@@ -2,6 +2,7 @@ const CategoryModel = require("../models/CategoryModel");
 const { checkColumns } = require("../models/Tools");
 const categoryProductService = require("../services/CategoryProductService");
 const categoryService = require("../services/CategoryService");
+const productService = require("../services/ProductService");
 
 class CategoryActions {
     async createCategory(req, res) {
@@ -49,13 +50,17 @@ class CategoryActions {
 
     async getProducts(req, res) {
         try {
-            const id = req.params.id;
+            const id = parseInt(req.params.id);
             const categories = await categoryService.getCategoryChildrens(id);
-            console.log(categories);
-            res.status(200).json(categories);
+
+            const products = await productService.getCategoryProduct(
+                categories
+            );
+
+            res.status(200).json(products);
         } catch (err) {
             console.warn(err);
-            res.status(err.status).json({
+            res.status(400).json({
                 message: err.message,
             });
         }

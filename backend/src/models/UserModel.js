@@ -1,6 +1,5 @@
 const db = require("../db/db");
 const { Model } = require("objection");
-const AddressModel = require("./AddressModel");
 const { TABLE_USER, TABLE_ADDRESS } = require("../../constants");
 
 Model.knex(db);
@@ -11,9 +10,10 @@ class UserModel extends Model {
     }
 
     static get relationMappings() {
+        const AddressModel = require("./AddressModel");
         return {
             address: {
-                relation: AddressModel.HasManyRelation,
+                relation: Model.HasManyRelation,
                 modelClass: AddressModel,
                 join: {
                     from: `${TABLE_USER}.id`,

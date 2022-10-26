@@ -1,4 +1,8 @@
+const { response } = require("express");
+const { TABLE_CATEGORY_PRODUCT, TABLE_PRODUCT } = require("../../constants");
+const CategoryProductModel = require("../models/CategoryProductModel");
 const ProductModel = require("../models/ProductModel");
+const CategoryProductService = require("./CategoryProductService");
 
 class ProductService {
     async createProduct(product) {
@@ -37,6 +41,15 @@ class ProductService {
         } else {
             throw new Error("products empty");
         }
+    }
+
+    async getCategoryProduct(categoriesArray, offset = 0) {
+        const products = await ProductModel.query()
+            .joinRelated("category_product")
+            .whereIn("id_category", categoriesArray)
+            .offset(offset);
+
+        return products;
     }
 }
 
