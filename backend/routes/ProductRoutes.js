@@ -9,7 +9,7 @@ router.post(`${ENDPOINT_NAME}`, productActions.createProduct);
 
 router.get(`${ENDPOINT_NAME}/:id`, productActions.getProduct);
 router.get(
-    `${ENDPOINT_NAME}/getRandomProduct/:count`,
+    `${ENDPOINT_NAME}/getRandomProducts/:count`,
     productActions.getRandomProduct
 );
 router.delete(`${ENDPOINT_NAME}/:id`, productActions.removeProduct);

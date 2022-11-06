@@ -1,45 +1,80 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-import { API_ROUTES_CATEGORY, API_URL } from "../../constants";
-import { BounceLoader } from "react-spinners";
-import { firstColor } from "../../colors";
+import {
+    API_ROUTES_CATEGORY,
+    API_URL,
+    CATEGORY_PRODUCTS_COUNT,
+} from "../../constants";
+import ProductMiniature from "../../components/ProductMiniature/ProductMiniature";
+import CategoryPagination from "../../components/CategoryPagination/CategoryPagination";
+import styles from "./Category.module.scss";
+import LoadComponent from "../../components/LoadComponent/LoadComponent";
 
 const CategoryPage = () => {
     const { id } = useParams();
-    const [products, setProducts] = useState(null);
-    const [category, setCategory] = useState(null);
+    const [pageCurrent, setPageCurrent] = useState(1);
+    const [pageCount, setPageCount] = useState(1);
+    const [itemsCount, setItemsCount] = useState(0);
+    const [items, setItems] = useState(null);
 
     useEffect(() => {
-        getCategoryData();
-        getProducts();
-    }, []);
+        getNewData();
+    }, [pageCurrent, id]);
 
-    const getCategoryData = async () => {
-        const { data } = await axios.get(
-            `${API_URL}${API_ROUTES_CATEGORY}${id}`
+    const getNewData = async () => {
+        const pageData = await axios.get(
+            `${API_URL}${API_ROUTES_CATEGORY}getPageProduct/${id}/${CATEGORY_PRODUCTS_COUNT}/${pageCurrent}`
         );
-        setCategory(data);
+        setItems(pageData.data.items);
+        setItemsCount(pageData.data.pagination.count);
+        setPageCount(pageData.data.pagination.pageCount);
     };
 
-    const getProducts = async () => {};
+    const setPageHandler = (newPage) => {
+        switch (newPage) {
+            case "FIRST":
+                newPage = 1;
+                break;
+            case "PREV":
+                newPage = pageCurrent - 1;
+                break;
+            case "NEXT":
+                newPage = pageCurrent + 1;
+                break;
+            case "LAST":
+                newPage = pageCount;
+                break;
+        }
+        if (newPage) {
+            setPageCurrent(newPage);
+        }
 
-    const pageContent =
-        category && products ? (
-            <>
-                <h3>{category.name}</h3>
-                <p>{category.description}</p>
-            </>
-        ) : (
-            <BounceLoader color={firstColor} size={50}></BounceLoader>
-        );
+        // setPageCurrent(page);
+    };
+
+    const pageContent = !items ? (
+        <LoadComponent />
+    ) : (
+        <>
+            <CategoryPagination
+                pageCount={pageCount}
+                itemsCount={itemsCount}
+                setPageHandler={setPageHandler}
+                pageCurrent={pageCurrent}
+            />
+            {items.map((product) => (
+                <ProductMiniature {...product} key={product.id} />
+            ))}
+        </>
+    );
 
     return (
         <Container className="d-flex justify-content-center align-items-center flex-column pt-3">
-            {pageContent}
+            <Row className={styles.__center}>{pageContent}</Row>
         </Container>
     );
 };

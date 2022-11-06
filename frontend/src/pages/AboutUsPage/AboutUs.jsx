@@ -6,9 +6,7 @@ const AboutUs = () => {
     return (
         <Container>
             <h2>O nas</h2>
-            <p>
-                <LoremIpsum p={4} />
-            </p>
+            <LoremIpsum p={4} />
         </Container>
     );
 };

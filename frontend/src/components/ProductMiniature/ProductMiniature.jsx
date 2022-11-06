@@ -9,7 +9,7 @@ const ProductMiniature = ({ name, index, price, id }) => {
     return (
         <Col sm={6} md={4} lg={3} xl={2}>
             <article className={styles.product_miniature}>
-                <Link to={`/products/${id}`} title={name}>
+                <Link to={`/product-${id}`} title={name}>
                     <img src={noImage} />
                     <h6 className={styles.__name}>{name}</h6>
                     <p>{index}</p>

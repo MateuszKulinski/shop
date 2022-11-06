@@ -1,4 +1,6 @@
 const CategoryModel = require("../models/CategoryModel");
+const CategoryProductModel = require("../models/CategoryProductModel");
+const ProductModel = require("../models/ProductModel");
 
 class CategoryService {
     async createCategory(category) {
@@ -27,7 +29,7 @@ class CategoryService {
             .where("id_parent", id);
 
         if (categories.length) {
-            const arrayId = [id];
+            const arrayId = [parseInt(id)];
             await Promise.all(
                 categories.map(async (item) => {
                     const childId = await this.getCategoryChildrens(
@@ -38,8 +40,26 @@ class CategoryService {
             );
             return arrayId.flat();
         } else {
-            return id;
+            return parseInt(id);
         }
+    }
+
+    async getPageCount(id, productCount) {
+        const quantity = await ProductModel.query()
+            .joinRelated("category_product")
+            .whereIn("id_category", id)
+            .count("* as count");
+
+        return Math.ceil(quantity[0].count / productCount);
+    }
+
+    async getPageProductCount(id) {
+        const quantity = await ProductModel.query()
+            .joinRelated("category_product")
+            .whereIn("id_category", id)
+            .count("* as count");
+
+        return quantity[0].count;
     }
 }
 

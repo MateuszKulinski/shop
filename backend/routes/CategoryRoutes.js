@@ -14,7 +14,10 @@ router.get(
     categoryActions.getMainCategories
 );
 
-router.get(`${ENDPOINT_NAME}/getProducts/:id`, categoryActions.getProducts);
+router.get(
+    `${ENDPOINT_NAME}/getPageProduct/:id/:productCountPerPage/:page`,
+    categoryActions.getPageProduct
+);
 
 router.delete(`${ENDPOINT_NAME}/:id`, categoryActions.removeCategory);
 

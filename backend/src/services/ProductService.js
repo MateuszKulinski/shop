@@ -31,6 +31,7 @@ class ProductService {
             choiceIds.push(productsIdsArray[id]);
             productsIdsArray.slice(productsIds[id], 1);
         }
+
         if (choiceIds) {
             const choceProducts = await ProductModel.query().whereIn(
                 "id",
@@ -43,11 +44,13 @@ class ProductService {
         }
     }
 
-    async getCategoryProduct(categoriesArray, offset = 0) {
+    async getCategoryProduct(categoriesArray, productCount = 0, skip = 0) {
         const products = await ProductModel.query()
             .joinRelated("category_product")
             .whereIn("id_category", categoriesArray)
-            .offset(offset);
+            .offset(skip)
+            .limit(productCount)
+            .orderBy("id");
 
         return products;
     }

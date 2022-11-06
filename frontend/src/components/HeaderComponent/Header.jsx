@@ -9,8 +9,8 @@ import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import axios from "axios";
 import { API_ROUTES_CATEGORY, API_URL } from "../../constants";
-import { BounceLoader } from "react-spinners";
 import { firstColor } from "../../colors";
+import LoadComponent from "../../components/LoadComponent/LoadComponent";
 
 const Header = () => {
     const [categories, setCategories] = useState(null);
@@ -25,7 +25,7 @@ const Header = () => {
         categories.map((category) => (
             <Link
                 key={category.id}
-                to={`/category/${category.id}`}
+                to={`/category-${category.id}`}
                 title={category.name}
                 className="no-underline first-color dropdown-item"
             >
@@ -34,9 +34,13 @@ const Header = () => {
         ))
     ) : (
         <DropdownItem>
-            <BounceLoader color={firstColor} size={30} />
+            <LoadComponent />
         </DropdownItem>
     );
+
+    const hideDropdown = (e) => {
+        console.log(e);
+    };
 
     return (
         <Navbar fixed="top" variant="dark" className="bg-dark">
@@ -72,7 +76,7 @@ const Header = () => {
                                 </Button>
                             </li>
                             <li>
-                                <Dropdown>
+                                <Dropdown onChange={hideDropdown}>
                                     <DropdownToggle>Kategorie</DropdownToggle>
                                     <DropdownMenu>
                                         {dropdownContent}

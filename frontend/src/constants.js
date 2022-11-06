@@ -7,5 +7,9 @@ module.exports = Object.freeze({
 
     API_URL: `http://localhost:5000/api/`,
 
-    MAIN_PAGE_PRODUCTS_COUNT: 30,
+    MAIN_PAGE_PRODUCTS_COUNT: 18,
+
+    CATEGORY_PRODUCTS_COUNT: 15,
+
+    PAGINATION_RANGE: 2,
 });
