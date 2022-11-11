@@ -1,9 +1,17 @@
 const userService = require("../services/UserService");
+const crypto = require("crypto");
+const jwt = require("jsonwebtoken");
+const { JWT_SECRET } = require("../../config/hiddenConfig");
+const { EXPIRES_IN } = require("../../config/config");
 
 class UserActions {
-    async createUser(req, res) {
+    async register(req, res) {
         try {
             const user = { ...req.body };
+            user.password = crypto
+                .pbkdf2Sync(user.password, "", 1000, 64, "sha512")
+                .toString("hex");
+
             const createResponse = await userService.createUser(user);
             res.status(201).json(createResponse);
         } catch (err) {
@@ -14,10 +22,21 @@ class UserActions {
         }
     }
 
+    async login(req, res) {
+        const user = req.user;
+        const token = jwt.sign({ id: user.id }, JWT_SECRET, {
+            expiresIn: EXPIRES_IN,
+        });
+        res.status(200).json(token);
+    }
+
     async getUser(req, res) {
         try {
-            const id = req.params.id;
-            const data = await userService.getUser(id);
+            let data = req.user;
+            if (!req.user) {
+                const id = req.params.id;
+                data = await userService.getUser(id);
+            }
             res.status(200).json(data);
         } catch (err) {
             console.warn(err);

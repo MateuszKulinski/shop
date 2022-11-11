@@ -1,4 +1,4 @@
-const { TABLE_ORDER } = require("../../../constants");
+const { TABLE_ORDER } = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

@@ -1,4 +1,4 @@
-const { TABLE_IMAGE } = require("../../../constants");
+const { TABLE_IMAGE } = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

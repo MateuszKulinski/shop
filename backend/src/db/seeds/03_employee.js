@@ -1,7 +1,7 @@
 const { faker } = require("@faker-js/faker");
 const bcrypt = require("bcrypt");
 const Tools = require("../../models/Tools");
-const { TABLE_EMPLOYEE } = require("../../../constants");
+const { TABLE_EMPLOYEE } = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

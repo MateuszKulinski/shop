@@ -1,7 +1,10 @@
 const express = require("express");
 const userActions = require("../src/actions/UserActions");
+const UserService = require("../src/services/UserService");
 
 const router = express.Router();
+const password = require("passport");
+const jwt = require("../config/jwt");
 
 const ENDPOINT_NAME = "/user";
 
@@ -11,7 +14,13 @@ router.get(
     userActions.getUsersWithAddresses
 ); //tests
 
-router.post(`${ENDPOINT_NAME}/create`, userActions.createUser);
+router.post(`${ENDPOINT_NAME}/create`, userActions.register);
+router.get(
+    `${ENDPOINT_NAME}/login`,
+    password.authenticate("local", { session: false }),
+    userActions.login
+);
+router.get(`${ENDPOINT_NAME}/getUserData`, jwt.auth, userActions.getUser);
 
 router.delete(`${ENDPOINT_NAME}/:id`, userActions.removeUser);
 router.delete(

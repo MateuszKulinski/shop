@@ -5,7 +5,7 @@ const {
     TABLE_USER,
     TABLE_ADDRESS,
     COUNT_USERS,
-} = require("../../../constants");
+} = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

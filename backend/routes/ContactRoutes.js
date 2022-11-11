@@ -1,7 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
-const { GMAIL_LOGIN, GMAIL_PASS, TEST_MAIL } = require("../hiddenConfig");
+const {
+    GMAIL_LOGIN,
+    GMAIL_PASS,
+    TEST_MAIL,
+} = require("../config/hiddenConfig");
 
 router.post("/sendEmail", (req, res) => {
     const { firstname, lastname, email, message, check } = req.body;

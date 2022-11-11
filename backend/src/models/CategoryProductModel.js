@@ -4,7 +4,7 @@ const {
     TABLE_CATEGORY,
     TABLE_PRODUCT,
     TABLE_CATEGORY_PRODUCT,
-} = require("../../constants");
+} = require("../../config/constants");
 
 Model.knex(db);
 

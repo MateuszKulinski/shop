@@ -2,7 +2,7 @@ const {
     TABLE_CATEGORY_PRODUCT,
     COUNT_PRODUCT,
     COUNT_CATEGORIES,
-} = require("../../../constants");
+} = require("../../../config/constants");
 const Tools = require("../../models/Tools");
 /**
  * @param { import("knex").Knex } knex

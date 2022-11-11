@@ -6,13 +6,16 @@ const productRoutes = require("./routes/ProductRoutes");
 const categoryRoutes = require("./routes/CategoryRoutes");
 const contactRoutes = require("./routes/ContactRoutes");
 const cors = require("cors");
+const Passport = require("./config/passport");
 
-const { PORT } = require("./config");
+const { PORT } = require("./config/config");
 
 const app = express();
 const API_NAME = "/api";
 
 app.use(cors());
+
+Passport.passport();
 
 app.use(express.json());
 app.use(API_NAME, userRoutes);

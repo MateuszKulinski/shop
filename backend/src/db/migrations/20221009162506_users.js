@@ -1,4 +1,4 @@
-const { TABLE_USER } = require("../../../constants");
+const { TABLE_USER } = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

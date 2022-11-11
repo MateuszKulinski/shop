@@ -2,7 +2,7 @@ const {
     TABLE_CART_PRODUCT,
     TABLE_CART,
     TABLE_PRODUCT,
-} = require("../../../constants");
+} = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

@@ -1,4 +1,4 @@
-const { TABLE_STATUS } = require("../../../constants");
+const { TABLE_STATUS } = require("../../../config/constants");
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }

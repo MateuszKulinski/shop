@@ -1,7 +1,7 @@
 const db = require("../db/db");
 const { Model } = require("objection");
 
-const { TABLE_EMPLOYEE } = require("../../constants");
+const { TABLE_EMPLOYEE } = require("../../config/constants");
 
 Model.knex(db);
 

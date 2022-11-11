@@ -1,6 +1,9 @@
 const { faker } = require("@faker-js/faker");
 const Tools = require("../../models/Tools");
-const { TABLE_CATEGORY, COUNT_CATEGORIES } = require("../../../constants");
+const {
+    TABLE_CATEGORY,
+    COUNT_CATEGORIES,
+} = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

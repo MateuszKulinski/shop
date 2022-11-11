@@ -1,6 +1,6 @@
 const db = require("../db/db");
 const { Model } = require("objection");
-const { TABLE_USER, TABLE_ADDRESS } = require("../../constants");
+const { TABLE_USER, TABLE_ADDRESS } = require("../../config/constants");
 
 Model.knex(db);
 

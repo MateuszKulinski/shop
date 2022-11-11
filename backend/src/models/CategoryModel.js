@@ -1,7 +1,10 @@
 const db = require("../db/db");
 const { Model, snakeCaseMappers } = require("objection");
 
-const { TABLE_CATEGORY, TABLE_CATEGORY_PRODUCT } = require("../../constants");
+const {
+    TABLE_CATEGORY,
+    TABLE_CATEGORY_PRODUCT,
+} = require("../../config/constants");
 
 Model.knex(db);
 

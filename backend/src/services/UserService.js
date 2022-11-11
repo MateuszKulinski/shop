@@ -10,6 +10,10 @@ class UserService {
         return await UserModel.query().findById(id);
     }
 
+    async getUserByEmail(email) {
+        return await UserModel.query().where("email", email);
+    }
+
     async getUsers() {
         return await UserModel.query();
     }

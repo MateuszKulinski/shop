@@ -3,7 +3,7 @@ const {
     TABLE_CART,
     TABLE_ORDER,
     TABLE_STATUS,
-} = require("../../../constants");
+} = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

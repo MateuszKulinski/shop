@@ -1,4 +1,4 @@
-const { TABLE_EMPLOYEE } = require("../../../constants");
+const { TABLE_EMPLOYEE } = require("../../../config/constants");
 
 /**
  * @param { import("knex").Knex } knex

@@ -3,4 +3,5 @@ module.exports = Object.freeze({
     GMAIL_LOGIN: `mkwebdaytest@gmail.com`,
 
     TEST_MAIL: "pundor@op.pl",
+    JWT_SECRET: "jasf897asHS2",
 });
