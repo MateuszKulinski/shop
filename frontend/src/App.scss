@@ -1,35 +1,49 @@
-
-
 :root {
-  --firstColor: #cc0022,
-  --firstColorDark: #8f0029,
-  --secondColor: #ffbfd1,
-  --firstColor: #1dcc00,
-  --thirdColor: #ffbfd1,
+    --firstColor: #000a75;
+    --firstColorDark: #000520;
+    --secondColor: #ffbfd1;
+    --thirdColor: #ffbfd1;
+    --hoverEffect: brightness(180%);
+    --transitionTime: .5s all ease;
+    --appMidPadding: 0.25rem .5rem;
+    --borderLightColor: rgba(0, 0, 0, 0.175);
+    --navbarBackground: rgb(248,249,250);
+    --borderRadius: 5px;
 }
+
 
 [data-theme="dark"] {
-  --first-color: #240060;
+    --first-color: #240060;
 }
 
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
-.row{
-  width: 100%;
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
 }
-.white-text{
-  color: #fff;
+.row {
+    width: 100%;
 }
-.no-underline{
-  text-decoration: none;
+.white-text {
+    color: #fff;
 }
-.first-color{
-  color: var(--firstColor) !important;
+.no-underline {
+    text-decoration: none;
 }
-body{
-  background-color: #444;
+.first-color {
+    color: var(--firstColor) !important;
+}
+.btn-primary{
+    background-color: var(--firstColor);
+    border-color: var(--firstColor) !important;
+    transition: var(--transitionTime);
+}
+.btn-primary:active,
+.btn-primary:hover{
+    background-color: #fff !important;
+    color: var(--firstColor) !important;
 }

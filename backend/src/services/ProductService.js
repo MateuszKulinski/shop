@@ -1,11 +1,5 @@
-const { response } = require("express");
-const {
-    TABLE_CATEGORY_PRODUCT,
-    TABLE_PRODUCT,
-} = require("../../config/constants");
-const CategoryProductModel = require("../models/CategoryProductModel");
 const ProductModel = require("../models/ProductModel");
-const CategoryProductService = require("./CategoryProductService");
+const { createDisplayPrice } = require("../models/Tools");
 
 class ProductService {
     async createProduct(product) {
@@ -36,12 +30,15 @@ class ProductService {
         }
 
         if (choiceIds) {
-            const choceProducts = await ProductModel.query().whereIn(
+            const choiceProducts = await ProductModel.query().whereIn(
                 "id",
                 choiceIds
             );
 
-            return choceProducts;
+            choiceProducts.map((item) => {
+                item.priceDisplay = createDisplayPrice(item.price);
+            });
+            return choiceProducts;
         } else {
             throw new Error("products empty");
         }

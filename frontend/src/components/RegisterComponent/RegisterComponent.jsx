@@ -154,7 +154,7 @@ class RegisterComponent extends Component {
         }-${now.getDate()}`;
 
         return (
-            <Form onSubmit={this.register}>
+            <Form onSubmit={this.register} className={styles.registerForm}>
                 <Form.Group>
                     <Form.Label htmlFor="email">E-mail</Form.Label>
                     <Form.Control

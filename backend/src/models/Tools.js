@@ -1,3 +1,5 @@
+const { CURRENCY } = require("../../config/constants");
+
 class Tools {
     checkColumns = async (Model, columnName) => {
         const fields = await Model.query().columnInfo();
@@ -49,6 +51,10 @@ class Tools {
             );
         }
         return result;
+    };
+
+    createDisplayPrice = (price) => {
+        return `${price.toFixed(2).replace(".", ",")} ${CURRENCY}`;
     };
 }
 

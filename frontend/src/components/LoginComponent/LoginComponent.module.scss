@@ -25,10 +25,11 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.register{
-  border-right: none;
-  background-color: red;
-}
 .button{
-  margin-top: 15px;
+  margin-top: -25px;
+}
+.loginForm{
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }

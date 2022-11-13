@@ -29,6 +29,8 @@
   border-right: none;
   background-color: red;
 }
-.button{
-  margin-top: 15px;
+.registerForm{
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }

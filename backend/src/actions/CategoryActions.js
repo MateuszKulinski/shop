@@ -1,5 +1,5 @@
 const CategoryModel = require("../models/CategoryModel");
-const { checkColumns } = require("../models/Tools");
+const { checkColumns, createDisplayPrice } = require("../models/Tools");
 const categoryProductService = require("../services/CategoryProductService");
 const categoryService = require("../services/CategoryService");
 const productService = require("../services/ProductService");
@@ -98,6 +98,9 @@ class CategoryActions {
 
             const [items, productCount] = await Promise.all([products, count]);
             const pageCount = Math.ceil(productCount / productCountPerPage);
+            items.map((item) => {
+                item.priceDisplay = createDisplayPrice(item.price);
+            });
 
             res.status(200).json({
                 pagination: {

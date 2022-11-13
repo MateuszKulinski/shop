@@ -9,7 +9,7 @@ import RegisterComponent from "../../components/RegisterComponent/RegisterCompon
 class AuthPage extends Component {
     static contextType = StoreContext;
     state = {
-        isLoginForm: false, //false = register
+        isLoginForm: true, //false = register, true = login
     };
 
     changeWindow = (type) => {
@@ -32,7 +32,11 @@ class AuthPage extends Component {
                             <Col xs={12}>
                                 <Row className={styles.buttonsContainer}>
                                     <Col
-                                        className={styles.windowChanger}
+                                        className={
+                                            this.state.isLoginForm
+                                                ? styles.activeButton
+                                                : styles.tabButton
+                                        }
                                         xs={6}
                                         onClick={this.changeWindow.bind(
                                             this,
@@ -43,7 +47,11 @@ class AuthPage extends Component {
                                         Logowanie
                                     </Col>
                                     <Col
-                                        className={`${styles.windowChanger} ${styles.register}`}
+                                        className={
+                                            this.state.isLoginForm
+                                                ? styles.tabButton
+                                                : styles.activeButton
+                                        }
                                         xs={6}
                                         onClick={this.changeWindow.bind(
                                             this,

@@ -15,4 +15,6 @@ module.exports = Object.freeze({
     COUNT_CATEGORIES: 30,
     COUNT_PRODUCT: 1000,
     COUNT_USERS: 100,
+
+    CURRENCY: "zł",
 });

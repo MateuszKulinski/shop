@@ -141,7 +141,7 @@ class LoginComponent extends Component {
 
     render() {
         return (
-            <Form onSubmit={this.login}>
+            <Form onSubmit={this.login} className={styles.loginForm}>
                 <Form.Group>
                     <Form.Label htmlFor="loginEmail">E-mail</Form.Label>
                     <Form.Control

@@ -3,6 +3,7 @@ import { Container, Form, Button } from "react-bootstrap";
 import validator from "validator";
 import axios from "axios";
 import { API_URL } from "../../constants";
+import styles from "./Contact.module.scss";
 
 class Contact extends Component {
     state = {
@@ -152,7 +153,10 @@ class Contact extends Component {
         return (
             <Container>
                 <h2>Skontaktuj się z nami</h2>
-                <Form onSubmit={this.handleSubmit}>
+                <Form
+                    onSubmit={this.handleSubmit}
+                    className={styles.contactForm}
+                >
                     <Form.Group>
                         <Form.Label htmlFor="firstname">Imię</Form.Label>
                         <Form.Control
@@ -215,7 +219,7 @@ class Contact extends Component {
                         </Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Group>
+                    <Form.Group className={styles.formCheck}>
                         <Form.Check
                             id="check"
                             name="check"

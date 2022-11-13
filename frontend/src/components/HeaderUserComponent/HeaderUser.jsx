@@ -6,10 +6,11 @@ import { StoreContext } from "../../store/StoreProvider";
 import { useContext } from "react";
 import { Button } from "react-bootstrap";
 import { APP_LOCAL_STORAGE_PREFIX } from "../../constants";
+import styles from "../HeaderComponent/Header.module.scss";
 
 const HeaderUser = () => {
     const { user, setToken, setUser } = useContext(StoreContext);
-
+    console.log(styles);
     const logout = () => {
         localStorage.removeItem(`${APP_LOCAL_STORAGE_PREFIX}token`);
         setToken(null);
@@ -22,7 +23,7 @@ const HeaderUser = () => {
         </>
     ) : (
         <Link to={`/login`}>
-            <FontAwesomeIcon icon={userIcon} size="2x" />
+            <FontAwesomeIcon icon={userIcon} size="2x" className={styles.svg} />
         </Link>
     );
 

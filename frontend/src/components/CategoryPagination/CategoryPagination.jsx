@@ -3,6 +3,7 @@ import { faCaretLeft as faPrev } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight as faNext } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PAGINATION_RANGE } from "../../constants";
+import styles from "./CategoryPagination.module.scss";
 
 const CategoryPagination = ({
     pageCurrent,
@@ -10,35 +11,63 @@ const CategoryPagination = ({
     itemsCount,
     setPageHandler,
 }) => {
-    const firstButtonContent =
-        pageCurrent > 3 ? (
-            <button onClick={() => setPageHandler("FIRST")}>
-                <FontAwesomeIcon icon={faPrev} />
-                <FontAwesomeIcon icon={faPrev} />
-            </button>
-        ) : null;
+    const firstButtonContent = (
+        <button
+            onClick={() => setPageHandler("FIRST")}
+            className={
+                pageCurrent > 3
+                    ? styles.buttonNumber
+                    : `${styles.buttonNumber} ${styles.disabled}`
+            }
+            disabled={pageCurrent > 3 ? false : true}
+        >
+            <FontAwesomeIcon icon={faPrev} />
+            <FontAwesomeIcon icon={faPrev} />
+        </button>
+    );
 
-    const prevButtonContent =
-        pageCurrent > 2 ? (
-            <button onClick={() => setPageHandler("PREV")}>
-                <FontAwesomeIcon icon={faPrev} />
-            </button>
-        ) : null;
+    const prevButtonContent = (
+        <button
+            onClick={() => setPageHandler("PREV")}
+            className={
+                pageCurrent > 1
+                    ? styles.buttonNumber
+                    : `${styles.buttonNumber} ${styles.disabled}`
+            }
+            disabled={pageCurrent > 1 ? false : true}
+        >
+            <FontAwesomeIcon icon={faPrev} />
+        </button>
+    );
 
-    const nextButtonContent =
-        pageCurrent + 1 < pageCount ? (
-            <button onClick={() => setPageHandler("NEXT")}>
-                <FontAwesomeIcon icon={faNext} />
-            </button>
-        ) : null;
+    const nextButtonContent = (
+        <button
+            onClick={() => setPageHandler("NEXT")}
+            className={
+                pageCurrent < pageCount
+                    ? styles.buttonNumber
+                    : `${styles.buttonNumber} ${styles.disabled}`
+            }
+            disabled={pageCurrent < pageCount ? false : true}
+        >
+            <FontAwesomeIcon icon={faNext} />
+        </button>
+    );
 
-    const lastButtonContent =
-        pageCurrent + 2 < pageCount ? (
-            <button onClick={() => setPageHandler("LAST")}>
-                <FontAwesomeIcon icon={faNext} />
-                <FontAwesomeIcon icon={faNext} />
-            </button>
-        ) : null;
+    const lastButtonContent = (
+        <button
+            onClick={() => setPageHandler("LAST")}
+            className={
+                pageCurrent + 2 < pageCount
+                    ? styles.buttonNumber
+                    : `${styles.buttonNumber} ${styles.disabled}`
+            }
+            disabled={pageCurrent + 2 < pageCount ? false : true}
+        >
+            <FontAwesomeIcon icon={faNext} />
+            <FontAwesomeIcon icon={faNext} />
+        </button>
+    );
 
     const pageFrom = pageCurrent - PAGINATION_RANGE;
     const pageTo = pageCurrent + PAGINATION_RANGE;
@@ -52,13 +81,16 @@ const CategoryPagination = ({
 
     const numberButtonsContent = pageNumber.map((i) =>
         i === pageCurrent ? (
-            <button key={i} className="buttonNumber active">
+            <button
+                key={i}
+                className={`${styles.buttonNumber} ${styles.active}`}
+            >
                 {i}
             </button>
         ) : (
             <button
                 key={i}
-                className="buttonNumber"
+                className={styles.buttonNumber}
                 onClick={() => setPageHandler(i)}
             >
                 {i}

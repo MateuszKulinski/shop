@@ -1,0 +1,15 @@
+.buttonNumber{
+  width: 30px;
+  line-height: 30px;
+  background: #fff;
+  border: none;
+  font-size: .8rem;
+}
+.active{
+  font-size: .9rem;
+  font-weight: bold;
+}
+.disabled{
+  color: #ddd;
+  cursor: no-drop !important;
+}
