@@ -32,7 +32,7 @@ class Passport {
                             .pbkdf2Sync(password, "", 1000, 64, "sha512")
                             .toString("hex");
 
-                        if (user && cryptoPass === user[0].password) {
+                        if (user.length && cryptoPass === user[0].password) {
                             done(null, user[0]);
                         } else {
                             done(null, false);

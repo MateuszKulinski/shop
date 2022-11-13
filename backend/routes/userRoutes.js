@@ -15,12 +15,12 @@ router.get(
 ); //tests
 
 router.post(`${ENDPOINT_NAME}/create`, userActions.register);
-router.get(
+router.post(
     `${ENDPOINT_NAME}/login`,
     password.authenticate("local", { session: false }),
     userActions.login
 );
-router.get(`${ENDPOINT_NAME}/getUserData`, jwt.auth, userActions.getUser);
+router.post(`${ENDPOINT_NAME}/getUserData`, jwt.auth, userActions.getUser);
 
 router.delete(`${ENDPOINT_NAME}/:id`, userActions.removeUser);
 router.delete(

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import validator from "validator";
 import axios from "axios";
-import { API_HOST, API_URL } from "../../constants";
+import { API_URL } from "../../constants";
 
 class Contact extends Component {
     state = {

@@ -9,8 +9,8 @@ import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import axios from "axios";
 import { API_ROUTES_CATEGORY, API_URL } from "../../constants";
-import { firstColor } from "../../colors";
 import LoadComponent from "../../components/LoadComponent/LoadComponent";
+import HeaderUser from "../HeaderUserComponent/HeaderUser";
 
 const Header = () => {
     const [categories, setCategories] = useState(null);
@@ -46,12 +46,12 @@ const Header = () => {
         <Navbar fixed="top" variant="dark" className="bg-dark">
             <Container>
                 <Row className="align-items-center">
-                    <Col xs="1">
+                    <Col xs={3}>
                         <Link to="/" title="HOME">
                             <FontAwesomeIcon icon={homeIcon} size="2x" />
                         </Link>
                     </Col>
-                    <Col xs="10">
+                    <Col xs={6}>
                         <ul className="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0 justify-content-center gap-3">
                             <li>
                                 <Button variant="warning">
@@ -84,6 +84,12 @@ const Header = () => {
                                 </Dropdown>
                             </li>
                         </ul>
+                    </Col>
+                    <Col
+                        xs={3}
+                        className="d-flex justify-content-end align-items-center text-white gap-1"
+                    >
+                        <HeaderUser />
                     </Col>
                 </Row>
             </Container>
